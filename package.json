@@ -1,0 +1,10 @@
+{
+    "name": "grunt-less-test",
+    "version": "0.0.1",
+    "description": "grunt less test",
+    "devDependencies": {
+        "grunt": "0.4.2",
+        "grunt-contrib-less": "0.9.0",
+        "grunt-contrib-watch": "0.5.3"
+    }
+}
