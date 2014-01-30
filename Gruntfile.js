@@ -1,3 +1,4 @@
+/*jslint unparam:true */
 'use strict';
 
 var path = require('path');
@@ -16,11 +17,23 @@ module.exports = function (grunt) {
                     src: ['**/*.less'], // Actual pattern(s) to match.
                     //flatten: true,
                     ext: '.css',   // Dest filepaths will have this extension.
-                    rename: function(dest, matchedSrcPath, options) {
-                        console.log(matchedSrcPath);
+                    rename: function (dest, matchedSrcPath, options) {
                         return path.join(dest, matchedSrcPath.replace('les2', 'module/1'));
                     }
                 }]
+            }
+        },
+        nodemon: {
+            dev: {
+                script: 'index.js'
+            }
+        },
+        concurrent: {
+            target: {
+                tasks: ['watch', 'nodemon'],
+                options: {
+                    logConcurrentOutput: true
+                }
             }
         },
         watch: {
@@ -36,6 +49,8 @@ module.exports = function (grunt) {
     });
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-concurrent');
+    grunt.loadNpmTasks('grunt-nodemon');
 
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['concurrent']);
 };
