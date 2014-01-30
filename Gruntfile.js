@@ -13,7 +13,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,     // Enable dynamic expansion.
                     cwd: 'less/',
-                    dest: 'css/',
+                    dest: 'assets/',
                     src: ['**/*.less'], // Actual pattern(s) to match.
                     //flatten: true,
                     ext: '.css',   // Dest filepaths will have this extension.
@@ -25,7 +25,7 @@ module.exports = function (grunt) {
         },
         nodemon: {
             dev: {
-                script: 'index.js'
+                script: 'server.js'
             }
         },
         concurrent: {
@@ -42,7 +42,8 @@ module.exports = function (grunt) {
                 files: ['**/*.less'],
                 tasks: ['less'],
                 options: {
-                    nospawn: true
+                    nospawn: true,
+                    livereload: true
                 }
             }
         }
