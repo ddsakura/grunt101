@@ -1,15 +1,16 @@
 {
-    "name": "grunt-less-test",
-    "version": "0.0.1",
-    "description": "grunt less test",
-    "dependencies": {
-        "mojito": ">0.6"
-    },
-    "devDependencies": {
-        "grunt": "0.4.2",
-        "grunt-contrib-less": "0.9.0",
-        "grunt-contrib-watch": "0.5.3",
-        "grunt-nodemon": "0.2.0",
-        "grunt-concurrent": "0.4.3"
-    }
+  "name": "grunt-less-test",
+  "version": "0.0.1",
+  "description": "grunt less test",
+  "dependencies": {
+    "mojito": ">0.6"
+  },
+  "devDependencies": {
+    "grunt": "0.4.2",
+    "grunt-contrib-less": "0.9.0",
+    "grunt-contrib-watch": "0.5.3",
+    "grunt-nodemon": "0.2.0",
+    "grunt-concurrent": "0.4.3",
+    "grunt-shell": "~0.6.4"
+  }
 }

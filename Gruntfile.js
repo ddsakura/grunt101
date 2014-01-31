@@ -46,12 +46,22 @@ module.exports = function (grunt) {
                     livereload: true
                 }
             }
+        },
+        shell: {
+            start: {
+                options: {
+                    stdout: true
+                },
+                command: 'mojito start'
+            }
         }
     });
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-nodemon');
+    grunt.loadNpmTasks('grunt-shell');
 
     grunt.registerTask('default', ['concurrent']);
+    grunt.registerTask('ls', ['shell']);
 };
