@@ -30,7 +30,7 @@ module.exports = function (grunt) {
         },
         concurrent: {
             target: {
-                tasks: ['watch', 'nodemon'],
+                tasks: ['less', 'jshint:myFile' ,'watch', 'nodemon'],
                 options: {
                     logConcurrentOutput: true
                 }
@@ -45,6 +45,10 @@ module.exports = function (grunt) {
                     nospawn: true,
                     livereload: true
                 }
+            },
+            jshint: {
+                files: ['mojits/**/*.js'],
+                tasks: ['jshint:myFile']
             }
         },
         shell: {
@@ -54,6 +58,12 @@ module.exports = function (grunt) {
                 },
                 command: 'mojito start'
             }
+        },
+        jshint: {
+            options: {
+
+            },
+            myFile:  ['mojits/**/*.js']
         }
     });
     grunt.loadNpmTasks('grunt-contrib-less');
@@ -61,7 +71,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
     grunt.registerTask('default', ['concurrent']);
-    grunt.registerTask('ls', ['shell']);
+    grunt.registerTask('shell', ['shell']);
 };

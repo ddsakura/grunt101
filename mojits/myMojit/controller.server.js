@@ -21,13 +21,13 @@ YUI.add('mymojit', function(Y, NAME) {
          * @param ac {Object} The ActionContext that provides access
          *        to the Mojito API.
          */
-        index: function(ac) {
-                ac.done({
-                    status: 'Mojito is working!.',
-                    data: {
-                        some: 'Hello World'
-                    }
-                });
+        index: function (ac) {
+            ac.done({
+                status: 'Mojito is working!.',
+                data: {
+                    some: 'Hello World'
+                }
+            });
         }
 
     };
