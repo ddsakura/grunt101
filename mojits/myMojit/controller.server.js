@@ -22,17 +22,12 @@ YUI.add('mymojit', function(Y, NAME) {
          *        to the Mojito API.
          */
         index: function(ac) {
-            ac.models.get('model').getData(function(err, data) {
-                if (err) {
-                    ac.error(err);
-                    return;
-                }
-                ac.assets.addCss('./index.css');
                 ac.done({
                     status: 'Mojito is working!.',
-                    data: data
+                    data: {
+                        some: 'Hello World'
+                    }
                 });
-            });
         }
 
     };
