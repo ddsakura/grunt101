@@ -1,9 +1,9 @@
 {
-  "name": "grunt-less-test",
+  "name": "grunt-test",
   "version": "0.0.1",
-  "description": "grunt less test",
+  "description": "grunt test",
   "dependencies": {
-    "mojito": ">0.6"
+    "mojito": "> 0.6"
   },
   "devDependencies": {
     "grunt": "0.4.2",

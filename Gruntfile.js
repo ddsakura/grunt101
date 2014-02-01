@@ -56,7 +56,7 @@ module.exports = function (grunt) {
                 options: {
                     stdout: true
                 },
-                command: 'mojito start'
+                command: 'ls -al'
             }
         },
         jshint: {
@@ -74,5 +74,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
     grunt.registerTask('default', ['concurrent']);
-    grunt.registerTask('shell', ['shell']);
+    grunt.registerTask('ll', ['shell']);
 };
