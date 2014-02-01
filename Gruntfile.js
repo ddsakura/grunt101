@@ -5,6 +5,7 @@ var path = require('path');
 
 module.exports = function (grunt) {
     grunt.initConfig({
+        pkg: require('./package.json'),
         less: {
             development: {
                 options: {
@@ -52,12 +53,18 @@ module.exports = function (grunt) {
             }
         },
         shell: {
-            start: {
+            pkgname: {
+                options: {
+                    stdout: true
+                },
+                command: 'echo <%= pkg.name %>'
+            },
+            ll: {
                 options: {
                     stdout: true
                 },
                 command: 'ls -al'
-            }
+            },
         },
         jshint: {
             options: {
@@ -74,5 +81,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
     grunt.registerTask('default', ['concurrent']);
-    grunt.registerTask('ll', ['shell']);
+    grunt.registerTask('ll', ['shell:ll']);
+    grunt.registerTask('pkg', ['shell:pkgname']);
 };
