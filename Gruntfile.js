@@ -73,12 +73,17 @@ module.exports = function (grunt) {
             myFile:  ['mojits/**/*.js']
         }
     });
-    grunt.loadNpmTasks('grunt-contrib-less');
+    // method 1: loadNpmTasks manually
+    /*grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-shell');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-jshint');*/
+    // method 2: let load-grunt-tasks help us
+    require('load-grunt-tasks')(grunt);
+    // method 3: let load-grunt-tasks help us
+    //require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     grunt.registerTask('default', ['concurrent']);
     grunt.registerTask('ll', ['shell:ll']);
