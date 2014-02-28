@@ -1,0 +1,25 @@
+{
+    "app": {
+        "*": {
+            "app": {
+                "css": [
+                    "/static/grunt/assets/aaa.css",
+                    "/static/grunt/assets/module/1/bbb.css",
+                    "/static/grunt/assets/main.css"
+                ],
+                "ico": [
+                    "/favicon.ico"
+                ]
+            },
+            "mojits": {
+                "myMojit": {
+                    "index": {
+                        "css": [
+                            "/static/myMojit/assets/index.css"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

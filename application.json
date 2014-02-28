@@ -6,13 +6,23 @@
         "staticHandling": {
             "forceUpdate": true,
             "appName": "grunt"
-        }
-    },
-    {
-        "settings": [ "environment:development" ],
-        "staticHandling": {
-            "forceUpdate": true,
-            "appName": "grunt"
+        },
+        "viewEngine": {
+            "cacheTemplates": false
+        },
+        "resourceStore": {
+            "hotswap": true
+        },
+        "specs": {
+            "frame": {
+                "type": "ShakerHTMLFrameMojit",
+                "config": {
+                    "deploy": true,
+                    "child": {
+                        "type": "myMojit"
+                    }
+                }
+            }
         }
     }
 ]

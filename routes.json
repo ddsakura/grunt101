@@ -1,4 +1,8 @@
 [{
-    "settings": [ "master" ]
-
+    "settings": [ "master" ],
+    "foo index": {
+      "verbs": ["get"],
+      "path": "/",
+      "call": "frame.index"
+    }
 }]

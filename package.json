@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "grunt test",
   "dependencies": {
-    "mojito": "> 0.6"
+    "mojito": "> 0.6",
+    "mojito-shaker": "^4.1.10"
   },
   "devDependencies": {
     "grunt": "0.4.2",
@@ -14,6 +15,7 @@
     "grunt-shell": "~0.6.4",
     "grunt-contrib-jshint": "~0.8.0",
     "load-grunt-tasks": "^0.4.0",
-    "matchdep": "^0.3.0"
+    "matchdep": "^0.3.0",
+    "mojito-rs-hotswap": "0.0.6"
   }
 }

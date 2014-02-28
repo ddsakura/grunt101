@@ -25,7 +25,7 @@ YUI.add('mymojit', function(Y, NAME) {
             ac.done({
                 status: 'Mojito is working!.',
                 data: {
-                    some: 'Hello World'
+                    some: 'Hello World!'
                 }
             });
         }

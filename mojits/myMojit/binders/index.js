@@ -32,21 +32,7 @@ YUI.add('mymojit-binder-index', function(Y, NAME) {
         bind: function(node) {
             var me = this;
             this.node = node;
-            /**
-             * Example code for the bind method:
-             *
-             * node.all('dt').on('mouseenter', function(evt) {
-             *   var dd = '#dd_' + evt.target.get('text');
-             *   me.node.one(dd).addClass('sel');
-             *
-             * });
-             * node.all('dt').on('mouseleave', function(evt) {
-             *   
-             *   var dd = '#dd_' + evt.target.get('text');
-             *   me.node.one(dd).removeClass('sel');
-             *
-             * });
-             */
+            console.log(1);
         }
 
     };

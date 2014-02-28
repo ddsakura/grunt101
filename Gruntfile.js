@@ -26,7 +26,11 @@ module.exports = function (grunt) {
         },
         nodemon: {
             dev: {
-                script: 'server.js'
+                script: 'server.js',
+                options: {
+                    ignore: ['node_modules/**'],
+                    ext: 'json',
+                }
             }
         },
         concurrent: {
@@ -47,9 +51,19 @@ module.exports = function (grunt) {
                     livereload: true
                 }
             },
+            html: {
+                files: ['**/*.html'],
+                options: {
+                    nospawn: true,
+                    livereload: true
+                }
+            },
             jshint: {
                 files: ['mojits/**/*.js'],
                 tasks: ['jshint:myFile']
+            },
+            grunt: {
+                files: ['Gruntfile.js']
             }
         },
         shell: {
