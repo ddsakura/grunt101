@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "description": "grunt test",
   "dependencies": {
-    "mojito": "> 0.6",
-    "mojito-shaker": "^4.1.10"
+    "debug": "*",
+    "mojito": "~0.9.0",
+    "express": "*",
+    "mojito-shaker": "4.1.11"
   },
   "devDependencies": {
     "grunt": "0.4.2",
