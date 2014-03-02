@@ -1,5 +1,4 @@
-var debug = require('debug')('app'),
-    express = require('express'),
+var express = require('express'),
     libmojito = require('mojito'),
     app;
 
@@ -15,6 +14,6 @@ app.get('/status', function (req, res) {
 });
 
 app.listen(app.get('port'), function () {
-    debug('Server listening on port ' + app.get('port') + ' ' + 'in ' + app.get('env') + ' mode');
+    console.log('Server listening on port ' + app.get('port') + ' in ' + app.get('env') + ' mode');
 });
 module.exports = app;
