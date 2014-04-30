@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "description": "grunt test",
   "dependencies": {
-    "mojito": "~0.9.0",
+    "mojito": "0.9.x",
     "express": "*",
-    "mojito-shaker": "4.1.11"
+    "mojito-shaker": "4.x"
   },
   "devDependencies": {
-    "grunt": "0.4.2",
+    "grunt": "0.4.4",
     "grunt-contrib-less": "0.9.0",
     "grunt-contrib-watch": "0.5.3",
     "grunt-nodemon": "0.2.0",
